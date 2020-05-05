@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.groundwater.support.modules.user.mapper.UserMapper">
+
+    <select id="selectUserPage" resultType="com.groundwater.support.modules.user.entity.User">
+        select *
+        from user
+        <trim prefix="where" prefixOverrides="AND">
+            <if test="pg.param.age != null and pg.param.age != ''">
+                age = #{pg.param.age}
+            </if>
+            <if test="pg.param.name != null and pg.param.name != ''">
+                AND name = #{pg.param.name}
+            </if>
+            AND deleted = 0
+        </trim>
+    </select>
+    <!-- verify github #1532-->
+    <select id="findList" parameterType="com.groundwater.support.modules.user.entity.User" resultType="com.groundwater.support.modules.user.entity.User">
+        select * from user where name like concat(concat('%', #{user.name}), '%')
+    </select>
+
+
+
+</mapper>

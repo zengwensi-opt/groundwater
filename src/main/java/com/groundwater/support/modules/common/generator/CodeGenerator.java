@@ -20,6 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * @author wensi
+ */
 @RestController
 public class CodeGenerator {
     public final static String MODULENAME_PARENT = "com.groundwater.support.modules";

@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "febs",
+      "type": "com.groundwater.support.modules.common.properties.FebsProperties",
+      "sourceType": "com.groundwater.support.modules.common.properties.FebsProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "febs.open-aop-log",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.groundwater.support.modules.common.properties.FebsProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "febs.shiro",
+      "type": "com.groundwater.support.modules.common.properties.ShiroProperties",
+      "sourceType": "com.groundwater.support.modules.common.properties.FebsProperties"
+    },
+    {
+      "name": "febs.swagger",
+      "type": "com.groundwater.support.modules.common.properties.SwaggerProperties",
+      "sourceType": "com.groundwater.support.modules.common.properties.FebsProperties"
+    }
+  ],
+  "hints": []
+}

@@ -28,7 +28,6 @@ com\groundwater\support\modules\common\utils\HttpUtil.class
 com\groundwater\support\modules\system\service\impl\UserRoleServiceImpl.class
 com\groundwater\support\modules\common\authentication\ShiroRealm.class
 com\groundwater\support\modules\common\annotation\Log.class
-com\groundwater\support\SupportApplication.class
 com\groundwater\support\modules\common\domain\RegexpConstant.class
 com\groundwater\support\modules\common\properties\FebsProperties.class
 com\groundwater\support\modules\common\authentication\JWTFilter.class
@@ -63,6 +62,7 @@ com\groundwater\support\modules\system\dao\UserRoleMapper.class
 com\groundwater\support\modules\system\service\impl\DeptServiceImpl.class
 com\groundwater\support\modules\system\domain\UserConfig.class
 com\groundwater\support\modules\common\converter\TimeConverter.class
+com\groundwater\support\modules\system\service\impl\WordServiceImpl.class
 com\groundwater\support\modules\common\domain\router\RouterMeta.class
 com\groundwater\support\modules\common\controller\BaseController.class
 com\groundwater\support\modules\common\authentication\JWTToken.class
@@ -110,6 +110,7 @@ com\groundwater\support\modules\system\dao\LogMapper.class
 com\groundwater\support\modules\system\domain\UserRole.class
 com\groundwater\support\modules\common\exception\FebsException.class
 com\groundwater\support\modules\common\domain\FebsResponse.class
+com\groundwater\support\GroundWaterApplication.class
 com\groundwater\support\modules\system\controller\LogController.class
 com\groundwater\support\modules\common\utils\HttpUtil$1.class
 com\groundwater\support\modules\common\generator\CodeGenerator.class

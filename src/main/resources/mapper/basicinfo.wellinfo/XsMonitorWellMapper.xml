@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.groundwater.support.modules.basicinfo.wellinfo.mapper.XsMonitorWellMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.groundwater.support.modules.basicinfo.wellinfo.entity.XsMonitorWell">
+        <id column="monitor_well_id" property="monitorWellId" />
+        <result column="origin_monitor_well_id" property="originMonitorWellId" />
+        <result column="table_id" property="tableId" />
+        <result column="monitor_well_keep" property="monitorWellKeep" />
+        <result column="longitude" property="longitude" />
+        <result column="latitude" property="latitude" />
+        <result column="belong_addr" property="belongAddr" />
+        <result column="belong_area_code" property="belongAreaCode" />
+        <result column="belong_company" property="belongCompany" />
+        <result column="connect_person_name" property="connectPersonName" />
+        <result column="connect_person_tel" property="connectPersonTel" />
+        <result column="industry_name1" property="industryName1" />
+        <result column="industry_code1" property="industryCode1" />
+        <result column="industry_name2" property="industryName2" />
+        <result column="industry_code2" property="industryCode2" />
+        <result column="subarea" property="subarea" />
+        <result column="well_create_time" property="wellCreateTime" />
+        <result column="well_deep" property="wellDeep" />
+        <result column="medium_type_id" property="mediumTypeId" />
+        <result column="medium_type_name" property="mediumTypeName" />
+        <result column="pipe_out_diameter" property="pipeOutDiameter" />
+        <result column="pipe_type_id" property="pipeTypeId" />
+        <result column="pipe_type_name" property="pipeTypeName" />
+        <result column="level_depth" property="levelDepth" />
+        <result column="monitor_horizon_id" property="monitorHorizonId" />
+        <result column="monitor_horizon_name" property="monitorHorizonName" />
+        <result column="monitor_factor_id" property="monitorFactorId" />
+        <result column="monitor_factor_name" property="monitorFactorName" />
+        <result column="monitor_factor_remark" property="monitorFactorRemark" />
+        <result column="monitor_rate" property="monitorRate" />
+        <result column="position_relation_id" property="positionRelationId" />
+        <result column="position_relation_name" property="positionRelationName" />
+        <result column="flow_position_relation_id" property="flowPositionRelationId" />
+        <result column="flow_position_relation_name" property="flowPositionRelationName" />
+        <result column="well_type_id" property="wellTypeId" />
+        <result column="well_type_name" property="wellTypeName" />
+        <result column="well_property_id" property="wellPropertyId" />
+        <result column="well_property_name" property="wellPropertyName" />
+        <result column="well_category_id" property="wellCategoryId" />
+        <result column="well_category_name" property="wellCategoryName" />
+        <result column="pipe_length_begin" property="pipeLengthBegin" />
+        <result column="pipe_length_end" property="pipeLengthEnd" />
+        <result column="filter_pipe_length_begin" property="filterPipeLengthBegin" />
+        <result column="filter_pipe_length_end" property="filterPipeLengthEnd" />
+        <result column="set_pipe_length_begin" property="setPipeLengthBegin" />
+        <result column="set_pipe_length_end" property="setPipeLengthEnd" />
+        <result column="surround_pollution_id" property="surroundPollutionId" />
+        <result column="surround_pollution_name" property="surroundPollutionName" />
+        <result column="surround_pollution_remark" property="surroundPollutionRemark" />
+        <result column="remark" property="remark" />
+        <result column="fill_out_name" property="fillOutName" />
+        <result column="fill_out_tel" property="fillOutTel" />
+        <result column="check_name" property="checkName" />
+        <result column="fill_out_date" property="fillOutDate" />
+        <result column="del_flag" property="delFlag" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="create_user_name" property="createUserName" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modify" property="gmtModify" />
+    </resultMap>
+
+</mapper>

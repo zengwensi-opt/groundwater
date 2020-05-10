@@ -9,9 +9,11 @@ import com.baomidou.mybatisplus.generator.config.po.TableFill;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import sun.security.util.Password;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,14 +28,17 @@ import java.util.Properties;
 @RestController
 public class CodeGenerator {
     public final static String MODULENAME_PARENT = "com.groundwater.support.modules";
+    @Value("${spring.datasource.password}")
+    private String sql_password ;
 
     @GetMapping("/code/generator/{moduleName}/{tableName}/{author}")
-    public static void generator(@PathVariable String moduleName,@PathVariable String  tableName,@PathVariable String author) throws Exception{
+    public  void generator(@PathVariable String moduleName,@PathVariable String  tableName,@PathVariable String author) throws Exception{
         String projectPath = System.getProperty("user.dir");
         //配置文件
         Properties properties = new Properties();
         InputStream inStream = new FileInputStream(new File(projectPath+"/src/main/resources/config/application-dev.yml"));
         properties.load(inStream);
+        properties.setProperty("password", sql_password);
 
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();

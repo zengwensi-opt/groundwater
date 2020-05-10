@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author wensi
  */
 @SpringBootApplication
-public class SupportApplication {
+public class GroundWaterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SupportApplication.class, args);
+        SpringApplication.run(GroundWaterApplication.class, args);
     }
 
 }

@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 
 @Order
 @Slf4j
-@Component
+//@Component
 public class StartedUpRunner implements ApplicationRunner {
 
     @Autowired

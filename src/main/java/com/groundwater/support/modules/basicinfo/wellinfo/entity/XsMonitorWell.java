@@ -3,10 +3,9 @@ package com.groundwater.support.modules.basicinfo.wellinfo.entity;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableField;
+
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -23,6 +22,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
+@TableName("xs_monitor_well")
 public class XsMonitorWell implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -187,6 +187,10 @@ public class XsMonitorWell implements Serializable {
      * 与场地方位关系name
      */
     private String positionRelationName;
+    /**
+     * 与场地方位关系备注
+     */
+    private String positionRelationRemark ;
 
     /**
      * 与地下水流方位关系id

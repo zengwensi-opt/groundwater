@@ -84,6 +84,7 @@ public class XsMonitorWellController {
         reader.setHeaderAlias(Constant.WELL_INFO_HEAD);
 
         List<XsMonitorWell> all = reader.read(0,1,XsMonitorWell.class);
+        xsMonitorWellService.importData(all);
         System.out.println();
     }
 }

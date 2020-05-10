@@ -1,5 +1,6 @@
 package com.groundwater.support.modules.system.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.groundwater.support.modules.common.domain.QueryRequest;
 import com.groundwater.support.modules.common.utils.SortUtil;
 import com.groundwater.support.modules.system.dao.DictMapper;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.List;
 
@@ -68,4 +70,25 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         List<String> list = Arrays.asList(dictIds);
         this.baseMapper.deleteBatchIds(list);
     }
+
+    @Override
+    public List<Dict> getDict(String tableName,String fieldName){
+        QueryWrapper<Dict> queryWrapper = new QueryWrapper<>();
+
+        queryWrapper.eq("TABLE_NAME",tableName).eq("FIELD_NAME",fieldName);
+        return this.list(queryWrapper);
+    }
+    @Override
+    public String getDict(String tableName, String fieldName,String value){
+        QueryWrapper<Dict> queryWrapper = new QueryWrapper<>();
+
+        queryWrapper.eq("TABLE_NAME",tableName).eq("FIELD_NAME",fieldName).eq("VALUEE",value);
+        Dict dict =  this.getOne(queryWrapper);
+        if(null !=dict ){
+            return dict.getKeyy();
+        }
+        return null ;
+
+    }
+
 }
